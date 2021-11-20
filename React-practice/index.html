@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React- program in html file</title>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <script>
+        let root = document.getElementById("root");
+        // let el = React.createElement("h1", null, "Hello React World !!!");
+        let el = React.createElement("h1", { children: "Hello React World !!!333", blablablabla: "Anything just funny", thirdfynny: "3rd unny" });
+        ReactDOM.render(el, root);
+        console.log(React.version);
+    </script> -->
+    <script>
+        let spanInner = React.createElement("span", { children: "Hellow React World in Span -tag" });
+        // let el = React.createElement('h1', { children: spanInner });
+        // OR
+        let el = React.createElement('h1', null, spanInner);
+        ReactDOM.render(el, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
